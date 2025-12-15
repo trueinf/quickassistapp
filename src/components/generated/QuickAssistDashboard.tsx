@@ -6,6 +6,7 @@ import { AITools } from './AITools';
 import { Reports } from './Reports';
 import { DocsAndSOPs } from './DocsAndSOPs';
 import { KnowledgeExplorer } from './KnowledgeExplorer';
+import { KnowledgeGraph } from './KnowledgeGraph';
 import { Escalations } from './Escalations';
 type StatCardProps = {
   title: string;
@@ -180,7 +181,7 @@ export const QuickAssistDashboard = () => {
 
         {/* Main Content Area */}
         <main className="flex-1 px-4 sm:px-6 lg:px-8 py-8 overflow-auto">
-          {activeMenu === 'triage' ? <TriageCenter /> : activeMenu === 'analytics' ? <Analytics /> : activeMenu === 'ai-tools' ? <AITools /> : activeMenu === 'reports' ? <Reports /> : activeMenu === 'docs-sops' ? <DocsAndSOPs /> : activeMenu === 'knowledge-explorer' ? <KnowledgeExplorer /> : activeMenu === 'escalations' ? <Escalations /> : <>
+          {activeMenu === 'triage' ? <TriageCenter /> : activeMenu === 'analytics' ? <Analytics /> : activeMenu === 'ai-tools' ? <AITools /> : activeMenu === 'reports' ? <Reports /> : activeMenu === 'docs-sops' ? <DocsAndSOPs /> : activeMenu === 'knowledge-graph' ? <KnowledgeGraph /> : activeMenu === 'knowledge-explorer' ? <KnowledgeExplorer /> : activeMenu === 'escalations' ? <Escalations /> : <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <StatCard title="Total Tickets Today" value={124} icon={<Users className="w-5 h-5 text-blue-600" />} trend="+12%" trendUp={true} />
                 <StatCard title="AI Resolved (Tier-1)" value="42%" icon={<CheckCircle2 className="w-5 h-5 text-green-600" />} trend="+8%" trendUp={true} />
